@@ -1,0 +1,23 @@
+
+.container {
+    width: 330px;
+    height: calc(100% - (20px + 83px));
+    background-color: var(--component);
+    border-radius: 10px;
+    border-top: 3px solid var(--effect);
+    margin-bottom: 20px;
+}
+
+.items--holder {
+    background-color: inherit;
+    width: calc(100% - (22px + 20px));
+    height: calc(100% - (25px + 40px + 20px));
+    margin: 0 22px 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    align-items: center;
+    overflow-y: scroll;
+    flex-shrink: 1;
+    padding-right: 7px;
+}
