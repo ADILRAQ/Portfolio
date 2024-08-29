@@ -1,33 +1,35 @@
 import * as React from "react";
 import './contact.css';
-// import TextField from '@mui/material/TextField';
-// import Box from '@mui/material/Box';
+import { TextField, Stack, Button, Autocomplete } from "@mui/material";
 
-import { TextField, Stack, Button } from "@mui/material";
+const InputStyle = {
+    '& .MuiInputBase-input': {
+        color: 'white', // Input text color
+        fontFamily: 'monoscope',
+        fontSize: '16px'
+    },
+    '& .MuiInputLabel-root': {
+        color: 'rgba(255, 255, 255, 0.7)', // Label color (placeholder)
+    },
+    '& .MuiFilledInput-root': {
+        backgroundColor: '#2F2F2F', // Optional: background color for filled variant
+    },
+}
 
 const Contact = () => {
 
     return (
         <div className="contact">
             <div className="header dosis-bold">Contact</div>
-            <form noValidate style={{background:'red'}}>
-                {/* <Stack spacing={2} width={10} height={100}> */}
-                    <TextField label="Name" type="text" size="medium" style={{background:'white'}}/>
-                    <TextField label="Email" type="email" />
-                    <TextField label="Message" type="text" />
+            <form noValidate >
+                <Stack spacing={2}>
+                    <TextField variant="filled" label="Name" type="text" autoComplete="false" sx={InputStyle} required />
+                    <TextField variant="filled" label="Email" type="email" autoComplete="false" sx={InputStyle} required />
+                    <TextField variant="filled" label="Message" multiline rows={2} type="text" autoComplete="false" sx={InputStyle} required />
                     <Button>
                         Send
                     </Button>
-                {/* </Stack> */}
-
-            {/* <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-                <label className="text dosis-light">Name</label>
-                <input type="text" name="name" id="name" />
-                <label className="text dosis-light">Email</label>
-                <input type="text" name="email" id="email" />
-                <label className="text dosis-light">Message</label>
-                <input type="text" name="message" id="message" />
-                <input type="submit" /> */}
+                </Stack>
             </form>
         </div>
     );
