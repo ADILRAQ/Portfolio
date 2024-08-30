@@ -6,7 +6,7 @@ import Contact from './Contact/contact';
 
 function App() {
   return (
-    <>
+    <div className='wrapper'>
       <img src='Logo.svg' alt="Logo" className='logo' />
       <div className='main'>
         <div className='side'>
@@ -18,7 +18,7 @@ function App() {
           <Contact />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

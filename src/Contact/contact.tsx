@@ -1,32 +1,29 @@
 import * as React from "react";
 import './contact.css';
-import { TextField, Stack, Button, Autocomplete } from "@mui/material";
-
-const InputStyle = {
-    '& .MuiInputBase-input': {
-        color: 'white', // Input text color
-        fontFamily: 'monoscope',
-        fontSize: '16px'
-    },
-    '& .MuiInputLabel-root': {
-        color: 'rgba(255, 255, 255, 0.7)', // Label color (placeholder)
-    },
-    '& .MuiFilledInput-root': {
-        backgroundColor: '#2F2F2F', // Optional: background color for filled variant
-    },
-}
+import { Stack, Button} from "@mui/material";
+import Input from "../components/Input/Input";
 
 const Contact = () => {
+
+    const [name, setName] = React.useState<string>('');
+    const [email, setEmail] = React.useState<string>('');
+    const [message, setMessage] = React.useState<string>('');
+
+    React.useEffect(() => {
+        console.log('Name:', name);
+        console.log('email:', email);
+        console.log('message:', message);
+    }, [name, email, message]);
 
     return (
         <div className="contact">
             <div className="header dosis-bold">Contact</div>
-            <form noValidate >
+            <form>
                 <Stack spacing={2}>
-                    <TextField variant="filled" label="Name" type="text" autoComplete="false" sx={InputStyle} required />
-                    <TextField variant="filled" label="Email" type="email" autoComplete="false" sx={InputStyle} required />
-                    <TextField variant="filled" label="Message" multiline rows={2} type="text" autoComplete="false" sx={InputStyle} required />
-                    <Button>
+                    <Input label="Name" variable={name} setvariable={setName} />
+                    <Input label="Email" variable={email} setvariable={setEmail} />
+                    <Input label="Message" variable={message} setvariable={setMessage} />
+                    <Button type="submit">
                         Send
                     </Button>
                 </Stack>

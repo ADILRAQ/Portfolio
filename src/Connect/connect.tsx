@@ -5,14 +5,15 @@ const Connect = () => {
 
     return (
         <div className="connect--holder">
-            <div className="resume">
+            Will be handled
+            {/* <div className="resume">
                 <p className="dosis-regular">Resume</p>
                 <img src="download.svg" alt="download" />
             </div>
             <div className="media" >
                 <img src="linkedin.svg" alt="linkedin" />
                 <img src="github.svg" alt="github" />
-            </div>
+            </div> */}
         </div>
     );
 }
