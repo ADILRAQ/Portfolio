@@ -2,28 +2,69 @@ import * as React from "react";
 import './contact.css';
 import { Stack, Button} from "@mui/material";
 import Input from "../components/Input/Input";
+import { useFormik } from "formik";
+import SendIcon from "../components/SendIcon/SendIcon";
+import { FormAttributes } from "../types/FormAttributes";
+import { formSchema } from "../types/formSchema";
 
 const Contact = () => {
 
-    const [name, setName] = React.useState<string>('');
-    const [email, setEmail] = React.useState<string>('');
-    const [message, setMessage] = React.useState<string>('');
+    const onSubmit = (values :FormAttributes) => {
+        // TODO: Handle Submiting data
+        console.log("Submit:", values);
+    }
 
-    React.useEffect(() => {
-        console.log('Name:', name);
-        console.log('email:', email);
-        console.log('message:', message);
-    }, [name, email, message]);
+    const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik<FormAttributes>({
+        initialValues: {
+            name: '',
+            email: '',
+            message: '',
+        },
+        validationSchema: formSchema,
+        onSubmit,
+    });
 
     return (
         <div className="contact">
             <div className="header dosis-bold">Contact</div>
-            <form>
+            <form autoComplete="off" onSubmit={handleSubmit}>
                 <Stack spacing={2}>
-                    <Input label="Name" variable={name} setvariable={setName} />
-                    <Input label="Email" variable={email} setvariable={setEmail} />
-                    <Input label="Message" variable={message} setvariable={setMessage} />
-                    <Button type="submit">
+                    <Input
+                        label="Name"
+                        input={values.name}
+                        error={errors.name}
+                        touched={touched.name}
+                        handleChange={handleChange}
+                        handleBlur={handleBlur}
+                    />
+                    <Input
+                        label="Email"
+                        input={values.email}
+                        error={errors.email}
+                        touched={touched.email}
+                        handleChange={handleChange}
+                        handleBlur={handleBlur}
+                    />
+                    <Input
+                        label="Message"
+                        input={values.message}
+                        error={errors.message}
+                        touched={touched.message}
+                        handleChange={handleChange}
+                        handleBlur={handleBlur}
+                    />
+                    <Button
+                        type="submit"
+                        variant="outlined"
+                        startIcon={<SendIcon />}
+                        style={{
+                            width:"100px",
+                            placeSelf:"flex-end",
+                            backgroundColor:"var(--orange)",
+                            color:"var(--white)",
+                            border:"none"
+                        }}
+                    >
                         Send
                     </Button>
                 </Stack>
