@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { TextField } from '@mui/material';
 import { InputProps } from '../../types/InputProps';
-import { InputStyle } from './InputStyle';
+import { InputStyle } from '../Styling/InputStyle';
 
 const Input = (prop: InputProps) => {
 
@@ -11,6 +11,8 @@ const Input = (prop: InputProps) => {
             variant="filled"
             label={prop.label}
             type={prop.label === 'Email' ? "email" : "text"}
+            rows={prop.label === 'Message' ? 2 : 1}
+            multiline={prop.label === 'Message'}
             sx={InputStyle}
             value={prop.input}
             onChange={prop.handleChange}

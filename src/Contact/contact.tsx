@@ -1,11 +1,12 @@
 import * as React from "react";
 import './contact.css';
-import { Stack, Button} from "@mui/material";
+import { Stack, Button } from "@mui/material";
 import Input from "../components/Input/Input";
 import { useFormik } from "formik";
 import SendIcon from "../components/SendIcon/SendIcon";
 import { FormAttributes } from "../types/FormAttributes";
 import { formSchema } from "../types/formSchema";
+import { ButtonStyle } from "../components/Styling/ButtonStyle";
 
 const Contact = () => {
 
@@ -57,13 +58,7 @@ const Contact = () => {
                         type="submit"
                         variant="outlined"
                         startIcon={<SendIcon />}
-                        style={{
-                            width:"100px",
-                            placeSelf:"flex-end",
-                            backgroundColor:"var(--orange)",
-                            color:"var(--white)",
-                            border:"none"
-                        }}
+                        sx={ButtonStyle}
                     >
                         Send
                     </Button>

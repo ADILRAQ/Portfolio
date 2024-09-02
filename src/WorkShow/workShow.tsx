@@ -1,12 +1,12 @@
 import * as React from "react";
-import './project.css';
+import './WorkShow.css';
 import Item from "../components/Item/item";
 
-const Projects = () => {
+const WorkShow = (prop: {header: string}) => {
 
     return (
         <div className="container">
-            <div className="header dosis-bold">Projects</div>
+            <div className="header dosis-bold">{ prop.header }</div>
             <div className="items--holder">
                 <Item />
                 <Item />
@@ -29,4 +29,4 @@ const Projects = () => {
     );
 }
 
-export default Projects;
+export default WorkShow;

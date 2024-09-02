@@ -1,11 +1,12 @@
 
 .container {
     width: 330px;
-    height: calc(100% - (20px + 83px));
+    /* height: calc(100% - (20px + 83px)); */
+    flex: 1;
+    min-height: 400px;
     background-color: var(--component);
     border-radius: 10px;
     border-top: 3px solid var(--effect);
-    margin-bottom: 20px;
 }
 
 .items--holder {
@@ -20,4 +21,19 @@
     overflow-y: scroll;
     flex-shrink: 1;
     padding-right: 7px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--effect);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--grey);
+    transition: all .3 ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--orange);
 }
