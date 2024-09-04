@@ -3,10 +3,10 @@
     width: 100%;
     /* height: 400px; */
     flex: 0 0 auto;
-    background-color: var(--component);
+    /* background-color: var(--component);
     border-radius: 10px;
-    border-top: 3px solid var(--effect);
-    padding: 20px 0;
+    border-top: 3px solid var(--effect); */
+    padding-bottom: 20px;
 }
 
 form {

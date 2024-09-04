@@ -1,0 +1,113 @@
+
+@property --height {
+    syntax: '<length>';
+    inherits: true;
+    initial-value: 100px;
+}
+
+@property --deg {
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 180deg;
+}
+
+.tech__container {
+    width: 100%;
+    height: var(--height, 100px);
+    position: relative;
+}
+
+.showmore {
+    transform: rotate(var(--deg));
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 25px;
+    height: 25px;
+    background-image: url('../../public/show-more.svg');
+    background-position: center;
+    background-repeat: none;
+    background-size: 100%;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.showmore:hover {
+    background-image: url('../../public/show-more-hover.svg');
+}
+
+.tech--wrapper {
+    width: 85%;
+    height: calc(90% - (25px + (2 * 20px) + 7px));
+    background-color: var(--effect);
+    margin: 0 auto;
+    /* display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(auto, 100px);
+    gap: 1rem;
+    justify-content: center;
+    overflow-y: auto; */
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content: space-between; */
+    gap: 1rem;
+    overflow-y: auto;
+}
+
+.tech--logo {
+    width: 80px;
+    height: 80px;
+}
+
+
+.more {
+    animation: showMore linear .3s forwards;
+}
+
+.less {
+    animation: showLess linear .3s forwards;
+}
+
+.rotate {
+    animation: rotateIcon linear .3s forwards;
+}
+
+.rotateBack {
+    animation: rotateIconBack linear .3s forwards;
+}
+
+@keyframes showMore {
+    from {
+        --height: 100px
+    }
+    to {
+        --height: 320px;
+    }
+}
+
+@keyframes showLess {
+    from {
+        --height: 320px
+    }
+    to {
+        --height: 100px;
+    }
+}
+
+@keyframes rotateIcon {
+    from {
+        --deg: 180deg;
+    }
+    to {
+        --deg: 0deg;
+    }
+}
+
+@keyframes rotateIconBack {
+    from {
+        --deg: 0deg;
+    }
+    to {
+        --deg: 180deg;
+    }
+}

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import './App.css';
-import Projects from './WorkShow/workShow';
 import Connect from './Connect/connect';
 import Contact from './Contact/contact';
 import WorkShow from './WorkShow/workShow';
+import Techs from './Techs/Techs';
 
 function App() {
   return (
@@ -14,7 +14,9 @@ function App() {
           <WorkShow header='Projects' />
           <Connect />
         </div>
-        <div className='center'></div>
+        <div className='center'>
+          <Techs />
+        </div>
         <div className='side'>
           <Contact />
           <WorkShow header='Articles' />

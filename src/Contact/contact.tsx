@@ -26,7 +26,7 @@ const Contact = () => {
     });
 
     return (
-        <div className="contact">
+        <div className="contact component">
             <div className="header dosis-bold">Contact</div>
             <form autoComplete="off" onSubmit={handleSubmit}>
                 <Stack spacing={2}>
