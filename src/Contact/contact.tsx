@@ -11,7 +11,7 @@ import { ButtonStyle } from "../components/Styling/ButtonStyle";
 const Contact = () => {
 
     const onSubmit = (values :FormAttributes) => {
-        // TODO: Handle Submiting data
+        // TODO: Submit data to my email
         console.log("Submit:", values);
     }
 

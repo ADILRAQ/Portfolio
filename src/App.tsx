@@ -16,6 +16,7 @@ function App() {
         </div>
         <div className='center'>
           <Techs />
+          {/* TODO: Add Chat Component */}
         </div>
         <div className='side'>
           <Contact />
