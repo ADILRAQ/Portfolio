@@ -1,0 +1,59 @@
+
+.chat {
+    flex: 1;
+    width: 100%;
+    position: relative;
+}
+
+.chat__input {
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--effect);
+    border-radius: 10px;
+    border-top: 1px solid var(--grey);
+    display: flex;
+    align-items: center;
+}
+
+.chat__choice {
+    height: 100%;
+    width: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-flow: column;    
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.chat__choice--key {
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../public/redirect.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.chat__choice--key:hover {
+    background-image: url('../../public/redirect-hover.svg');
+}
+
+.up {
+    transform: rotate(-90deg);
+}
+
+.down {
+    transform: rotate(90deg);
+}
+
+.chat__choice--input {
+    color: var(--grey);
+    margin-left: 15px;
+}

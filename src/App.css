@@ -31,4 +31,7 @@
 .center {
   width: calc(100% - 2 * (330px + 20px));
   height: 100%;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
 }

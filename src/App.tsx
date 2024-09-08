@@ -4,6 +4,7 @@ import Connect from './Connect/connect';
 import Contact from './Contact/contact';
 import WorkShow from './WorkShow/workShow';
 import Techs from './Techs/Techs';
+import Chat from './Chat/Chat';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         </div>
         <div className='center'>
           <Techs />
-          {/* TODO: Add Chat Component */}
+          <Chat />
         </div>
         <div className='side'>
           <Contact />
