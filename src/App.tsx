@@ -10,7 +10,7 @@ import { ArticlesData, Projectsdata } from './data';
 function App() {
   return (
     <div className='wrapper'>
-      <img src='logo.svg' alt="Logo" className='logo' />
+      <img src='Logo.svg' alt="Logo" className='logo' />
       <div className='main'>
         <div className='side'>
           <WorkShow header='Projects' data={Projectsdata}/>
