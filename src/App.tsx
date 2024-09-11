@@ -5,14 +5,15 @@ import Contact from './Contact/contact';
 import WorkShow from './WorkShow/workShow';
 import Techs from './Techs/Techs';
 import Chat from './Chat/Chat';
+import { ArticlesData, Projectsdata } from './data';
 
 function App() {
   return (
     <div className='wrapper'>
-      <img src='Logo.svg' alt="Logo" className='logo' />
+      <img src='logo.svg' alt="Logo" className='logo' />
       <div className='main'>
         <div className='side'>
-          <WorkShow header='Projects' />
+          <WorkShow header='Projects' data={Projectsdata}/>
           <Connect />
         </div>
         <div className='center'>
@@ -21,7 +22,7 @@ function App() {
         </div>
         <div className='side'>
           <Contact />
-          <WorkShow header='Articles' />
+          <WorkShow header='Articles' data={ArticlesData} />
         </div>
       </div>
     </div>

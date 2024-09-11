@@ -11,17 +11,17 @@
     gap: 10px;
     transition: .3s;
     flex: 0 0 auto;
-    opacity: .8;
+    cursor: context-menu;
 }
 
 .title {
-    overflow: hidden;
     margin-left: 10px;
     width: 250px;
-    height: fit-content;
-    background-color: inherit;
+    height: 25px;
     color: var(--white);
+    overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .select {
@@ -35,7 +35,7 @@
 
 .item:hover {
     /* scale: 1.01; */
-    opacity: 1;
+    opacity: .8;
 }
 
 .item:hover > .select {

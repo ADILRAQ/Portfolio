@@ -34,6 +34,14 @@ html, body, #root {
 	font-size: 20px;
 }
 
+.dosis-regular--chat {
+	font-family: "Dosis", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 15px;
+}
+
 .dosis-light {
 	font-family: "Dosis", sans-serif;
 	font-optical-sizing: auto;

@@ -5,6 +5,16 @@
     position: relative;
 }
 
+.chat__wrapper {
+    width: 95%;
+    height: calc(100% - (25px + (2 * 20px) + 71px));
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+
 .chat__input {
     position: absolute;
     bottom: 0;
@@ -56,4 +66,23 @@
 .chat__choice--input {
     color: var(--grey);
     margin-left: 15px;
+}
+
+.chat__choice--send {
+    width: 45px;
+    height: 45px;
+    background-color: var(--logo);
+    position: absolute;
+    right: 20px;
+    border-radius: 50%;
+    background-image: url('../../public/send.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.chat__choice--send:hover {
+    opacity: .8;
 }

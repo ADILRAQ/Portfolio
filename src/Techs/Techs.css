@@ -73,11 +73,11 @@
 }
 
 .rotate {
-    animation: rotateIcon linear .3s forwards;
+    animation: rotateIcon linear .1s forwards;
 }
 
 .rotateBack {
-    animation: rotateIconBack linear .1s forwards;
+    animation: rotateIconBack linear .3s forwards;
 }
 
 @keyframes showMore {

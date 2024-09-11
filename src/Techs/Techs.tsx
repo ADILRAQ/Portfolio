@@ -11,9 +11,9 @@ const Techs = () => {
     };
 
     return (
-        <div className={!anim ? 'tech__container component less' : 'tech__container component more'} >
+        <div className={!anim ? 'tech__container component more' : 'tech__container component less'} >
             <h1 className="header dosis-bold">Techs</h1>
-            <div className="tech--wrapper" style={!anim ? {display: 'none'} : {}}>
+            <div className="tech--wrapper" style={anim ? {display: 'none'} : {}}>
             {
                 TechsNames.map((data :[string, string]) => <img key={data[0]} src={`Tech/${data[0]}`} alt={`${data[1]} logo`} className="tech--logo" title={data[1]} />)
             }
