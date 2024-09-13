@@ -86,3 +86,16 @@
 .chat__choice--send:hover {
     opacity: .8;
 }
+
+.notice {
+    margin: 0 auto;
+    color: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notice span {
+    color: var(--logo);
+    margin-left: 5px;
+}
