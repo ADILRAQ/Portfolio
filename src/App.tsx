@@ -13,10 +13,10 @@ function App() {
   return (
     <div className='wrapper'>
       <img src='Logo.svg' alt="Logo" className='logo' />
-      {/* <Marquee play autoFill pauseOnHover >
+      <Marquee play autoFill pauseOnHover >
           <Inform color='logo'/>
           <Inform color='orange'/>
-      </Marquee> */}
+      </Marquee>
       <div className='main'>
         <div className='side'>
           <WorkShow header='Projects' data={Projectsdata}/>
