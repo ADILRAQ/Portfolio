@@ -17,7 +17,7 @@
 .title {
     margin-left: 10px;
     width: 250px;
-    height: 25px;
+    height: 26px;
     color: var(--white);
     overflow: hidden;
     text-overflow: ellipsis;

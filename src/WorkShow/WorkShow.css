@@ -3,7 +3,7 @@
     width: 330px;
     /* height: calc(100% - (20px + 83px)); */
     flex: 1;
-    min-height: 400px;
+    /* min-height: 400px; */
     background-color: var(--component);
     border-radius: 10px;
     border-top: 3px solid var(--effect);

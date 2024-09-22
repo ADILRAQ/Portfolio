@@ -22,8 +22,8 @@
     position: absolute;
     right: 10px;
     bottom: 10px;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background-image: url('../../public/show-more.svg');
     background-position: center;
     background-repeat: none;
@@ -77,7 +77,7 @@
 }
 
 .rotateBack {
-    animation: rotateIconBack linear .3s forwards;
+    animation: rotateIconBack linear .1s forwards;
 }
 
 @keyframes showMore {

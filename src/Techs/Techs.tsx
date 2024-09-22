@@ -18,7 +18,7 @@ const Techs = () => {
                 TechsNames.map((data :[string, string]) => <img key={data[0]} src={`Tech/${data[0]}`} alt={`${data[1]} logo`} className="tech--logo" title={data[1]} />)
             }
             </div>
-            <div className={!anim ? 'showmore rotateBack' : 'showmore rotate'} onClick={handleClick} ></div>
+            <div className={anim ? 'showmore rotateBack' : 'showmore rotate'} onClick={handleClick} ></div>
         </div>
     );
 };
