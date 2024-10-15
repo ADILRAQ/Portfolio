@@ -1,35 +1,13 @@
-import * as React from 'react';
-import './App.css';
-import Connect from './Connect/connect';
-import Contact from './Contact/contact';
-import WorkShow from './WorkShow/workShow';
-import Techs from './Techs/Techs';
-import Chat from './Chat/Chat';
-import { ArticlesData, Projectsdata } from './data';
-import Marquee from 'react-fast-marquee';
-import Inform from './components/Inform/Inform';
+import React from 'react';
+import image from './Image.svg';
+import Infos from './components/Infos';
 
 function App() {
   return (
-    <div className='wrapper'>
-      <img src='Logo.svg' alt="Logo" className='logo' />
-      <Marquee play autoFill pauseOnHover >
-          <Inform color='logo'/>
-          <Inform color='orange'/>
-      </Marquee>
-      <div className='main'>
-        <div className='side'>
-          <WorkShow header='Projects' data={Projectsdata}/>
-          <Connect />
-        </div>
-        <div className='center'>
-          <Techs />
-          <Chat />
-        </div>
-        <div className='side'>
-          <Contact />
-          <WorkShow header='Articles' data={ArticlesData} />
-        </div>
+    <div className='h-screen w-full bg-background flex gap-9 font-poppins'>
+      <img src={image} alt='' className='h-[100%] left-0'></img>
+      <div className='flex-1 h-screen w-full'>
+        <Infos />
       </div>
     </div>
   );
