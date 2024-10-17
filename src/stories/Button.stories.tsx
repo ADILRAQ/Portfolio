@@ -1,11 +1,22 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Button from "../components/Button";
-import { ComponentProps } from 'react';
+import React, { ComponentProps } from 'react';
+// import '../index.css';
 
 type StoryProps = ComponentProps<typeof Button>;
 
 const meta: Meta<StoryProps> = {
     component: Button,
+    argTypes: {
+        sz: {
+            options: ['sm', 'md', 'lg'],
+            control: 'select',
+        },
+        variant: {
+            options: ['normal', 'styled', 'dark'],
+            control: 'select',
+        }
+    }
 }
 
 export default meta;
@@ -14,8 +25,8 @@ type Story = StoryObj<StoryProps>;
 
 export const Normal :Story = {
     args: {
-        variant: 'normal',
-        sz: "sm",
+        variant: "normal",
+        sz: "md",
         children: 'Projects'
     },
     // render: (args) => {

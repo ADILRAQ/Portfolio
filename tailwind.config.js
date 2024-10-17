@@ -15,6 +15,7 @@ module.exports = {
       boxShadow: {
         add: '5px 5px #2D3134',
         takeoff: '0px 0px #2D3134',
+        fade: '0px 12px 48px #C4BFAE'
       }
     },
   },
