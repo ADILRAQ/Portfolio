@@ -58,7 +58,7 @@ const Button = ({children ,onClick, variant, sz}: ButtonProps) => {
     console.log(variant);
 
     return (
-        <button style={{...buttonSize[sz]}} className={ButtonVariant[variant]} >
+        <button style={{...buttonSize[sz]}} className={ButtonVariant[variant]} onClick={onClick} >
             { children }
         </button>
     )

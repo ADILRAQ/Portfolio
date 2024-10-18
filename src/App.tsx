@@ -3,6 +3,8 @@ import Navbar from './components/NavBar';
 import About from './pages/About';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout';
+import Projects from './pages/Projects';
+import Articles from './pages/Articles';
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />} >
           <Route index element={<About />} ></Route>
+          <Route path='/projects' element={<Projects />} ></Route>
+          <Route path='/articles' element={<Articles />} ></Route>
         </Route>
       </Routes>
     </div>
