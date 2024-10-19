@@ -39,12 +39,12 @@ const config = {
 };
 
 module.exports = () => {
-    if (isProduction) {
-        config.mode = 'production';
+    // if (isProduction) {
+    //     config.mode = 'production';
         
         
-    } else {
-        config.mode = 'development';
-    }
+    // } else {
+    //     config.mode = 'development';
+    // }
     return config;
 };

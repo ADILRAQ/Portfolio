@@ -8,7 +8,7 @@ type ButtonProps = PropsWithChildren<{
 
 const NORMAL = 'bg-transaprent hover:border-b-orange hover:border-b-2 transition duration-300 ease-in-out';
 const STYLED = 'bg-transaprent border-2 border-[#2D3134] text-[#2D3134] shadow-add hover:shadow-takeoff transition duration-300 ease-in-out';
-const DARK = 'bg-dark text-background shadow-fade hover:bg-background hover:text-dark hover:border-dark hover:border-2 hover:shadow-takeoff';
+const DARK = 'bg-dark text-background shadow-fade hover:bg-background hover:text-dark hover:border-dark hover:border-2 hover:shadow-takeoff duration-400 ease-in-out';
 
 const Button = ({children ,onClick, variant, sz}: ButtonProps) => {
 

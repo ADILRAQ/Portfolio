@@ -7,8 +7,12 @@ type StoryProps = ComponentProps<typeof Badge>;
 const meta :Meta<StoryProps> = {
   component: Badge,
   argTypes: {
-    style: {
+    variant: {
       options: ['orange', 'dark', 'bordered'],
+      control: 'select'
+    },
+    sz: {
+      options: ['sm', 'md'],
       control: 'select'
     }
   }
@@ -20,20 +24,23 @@ type Story = StoryObj<StoryProps>;
 
 export const Orange : Story = {
     args: {
-      style: 'orange',
+      variant: 'orange',
+      sz: 'sm',
       children: 'Done'
     }
 }
 
 export const Dark : Story = {
     args: {
-      style: 'dark',
+      variant: 'dark',
+      sz: 'sm',
       children: 'In Progress'
     }
-}
-export const Bordered : Story = {
+  }
+  export const Bordered : Story = {
     args: {
-      style: 'bordered',
+      variant: 'bordered',
+      sz: 'sm',
       children: 'Express.Js'
     }
 }

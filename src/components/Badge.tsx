@@ -1,24 +1,30 @@
 import React, { PropsWithChildren } from "react";
 
-type Status  = PropsWithChildren<{
-  style: 'orange' | 'dark' | 'bordered'
+export type BadgeProps  = PropsWithChildren<{
+  variant: 'orange' | 'dark' | 'bordered',
+  sz: 'sm' | 'md',
 }>;
 
-const Badge = ({style, children} : Status) => {
+const Badge = ({variant, sz, children} : BadgeProps) => {
 
-  // const badgeStyle :{style: 'orange' | 'dark' | } = [
+  // const badgevariant :{variant: 'orange' | 'dark' | } = [
   //   'font-medium text-sm bg-orange rounded-full px-5 py-1 text-background',
   //   'font-medium text-sm bg-dark rounded-full px-5 py-1 text-background'
   // ]
 
-  const badgeStyle :Record<Status['style'], string> = {
-    orange: 'font-medium text-sm bg-orange rounded-full px-5 py-2 text-background',
-    dark: 'font-medium text-sm bg-dark rounded-full px-5 py-2 text-background',
-    bordered: 'font-medium text-sm bg-transparent rounded-full px-5 py-1 text-dark border-solid border-2 border-dark',
+  const badgeVariant :Record<BadgeProps['variant'], string> = {
+    orange: 'font-medium bg-orange rounded-full text-background',
+    dark: 'font-medium bg-dark rounded-full text-background',
+    bordered: 'font-medium bg-transparent rounded-full text-dark border-solid border-2 border-dark',
+  }
+
+  const badgeSize :Record<BadgeProps['sz'], string> = {
+    sm: 'text-sm px-4 py-1',
+    md: 'text-md px-4 py-2'
   }
 
   return (
-    <span className={badgeStyle[style]}>
+    <span className={`${badgeVariant[variant]} ${badgeSize[sz]}`}>
       { children }
     </span>
   );
