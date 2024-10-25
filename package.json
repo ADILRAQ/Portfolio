@@ -8,6 +8,7 @@
     "@types/react-dom": "^18.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
     "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1"
@@ -54,6 +55,7 @@
     "@storybook/react": "^8.3.5",
     "@storybook/react-webpack5": "^8.3.5",
     "@storybook/test": "^8.3.5",
+    "@types/react-helmet": "^6.1.11",
     "@webpack-cli/generators": "^3.0.7",
     "autoprefixer": "^10.4.20",
     "css-loader": "^7.1.2",

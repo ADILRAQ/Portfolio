@@ -6,6 +6,7 @@ import Copy from '../Assets/Copy.svg';
 import { Links } from "../data";
 import toast, { Toaster } from "react-hot-toast";
 import Techs from "../components/Techs";
+import { Helmet } from 'react-helmet';
 
 const About = () => {
 
@@ -22,6 +23,10 @@ const About = () => {
 
   return (
     <div className="max-sm:ml-2">
+      <Helmet>
+        <title>About | Adil Raqioui</title>
+        <meta name="description" content="Learn more about me, my background, skills, and experience." />
+      </Helmet>
       <h1 className="font-bold text-8xl text-orange max-sm:text-5xl">HEY</h1>
       <div className="font-regular text-4xl mt-6 max-sm:text-xl max-sm:mt-3">
         <p>This is <b>ADIL RAQIOUI</b></p>
