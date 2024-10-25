@@ -19,8 +19,8 @@ const Badge = ({variant, sz, children} : BadgeProps) => {
   }
 
   const badgeSize :Record<BadgeProps['sz'], string> = {
-    sm: 'text-sm px-4 py-1',
-    md: 'text-md px-4 py-2'
+    sm: 'text-xs px-4 py-1',
+    md: 'text-sm px-4 py-1'
   }
 
   return (

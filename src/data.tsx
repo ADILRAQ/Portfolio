@@ -63,22 +63,22 @@ export const Projectsdata = new Array<Itemdata>(
     {
         name: 'Authentication-Express-MVC',
         link: 'https://github.com/ADILRAQ/Authentication-Express-MVC',
-        description: 'Express.js authentication system',
+        description: 'This project is an authentication system built using ExpressJs with both manual and Google authentication options. The project follows the MVC (Model-View-Controller) architecture and uses a Singleton pattern for user storage.',
         status: {
             content: 'Done',
             status: true,
         },
-        techs: ['ExpressJS', 'EJS', 'JWT']
+        techs: ['ExpressJS', 'EJS', 'JWT', 'MVC Architecture']
     },
     {
         name: 'Inception',
         link: 'https://github.com/ADILRAQ/Inception-42-cursus',
-        description: 'Docker Virtualization Project',
+        description: 'Docker Virtualization Project. This project aims to broaden your knowledge of system administration by using Docker. You will virtualize several Docker images, creating them in your new personal virtual machine.',
         status: {
             content: 'Done',
             status: true,
         },
-        techs: ['Docker', 'Docker-compose', 'VirtualBox', 'Shell Scripting']
+        techs: ['Docker', 'Docker-compose', 'NginX', 'MariaDB', 'Wordpress']
     },
     {
         name: 'IRC Server',

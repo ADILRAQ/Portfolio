@@ -1,33 +1,33 @@
 import { Meta, StoryObj } from "@storybook/react/*";
 import { ComponentProps } from "react";
-import AccordionItem from "../components/AccordionItem";
+import AccordionItem from "../components/Accordion";
 
 type AccordionItemProps = ComponentProps<typeof AccordionItem>;
 
-const meta :Meta<AccordionItemProps> = {
+const meta: Meta<AccordionItemProps> = {
   component: AccordionItem,
   argTypes: {
     data: {
-      control: 'object',
-    }
-  }
-}
+      control: "object",
+    },
+  },
+};
 
 export default meta;
 
 type Story = StoryObj<typeof AccordionItem>;
 
-export const Item :Story = {
+export const Item: Story = {
   args: {
     data: {
-      name: 'Title',
-      description: 'Content',
+      name: "Title",
+      description: "Content",
       status: {
         status: true,
-        content: 'Done'
+        content: "Done",
       },
-      techs: ['ReactJS', 'ExpressJS', 'Docker'],
-      link: ''
+      techs: ["ReactJS", "ExpressJS", "Docker"],
+      link: "",
     },
   },
-}
+};

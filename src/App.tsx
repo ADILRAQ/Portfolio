@@ -7,7 +7,7 @@ import Articles from './pages/Articles';
 
 function App() {
   return (
-    <div className='h-screen w-full min-h-[820px] bg-background flex gap-9 font-poppins text-dark relative'>
+    <div className='h-screen w-full min-h-[820px] bg-background flex gap-9 font-poppins text-dark relative max-sm:gap-0'>
       <Routes>
         <Route path='/' element={<Layout />} >
           <Route index element={<About />} ></Route>
