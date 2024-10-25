@@ -99,11 +99,11 @@ export const ArticlesData = new Array<Itemdata>(
         link: 'https://araq.notion.site/Explaining-MVC-as-a-story-ExpressJs-ad98772c759d4a5c895133118bf48b18?pvs=4',
     },
     {
-        name: "Docker Fundamentals",
+        name: 'Docker Fundamentals',
         link: 'https://araq.notion.site/Docker-Fundamentals-266a28f6376749b1935e3c2c91bf0333?pvs=4',
     },
     {
-        name: "PIPEX: UNIX mechanism in detail",
+        name: 'PIPEX: UNIX mechanism in detail',
         link: 'https://araq.notion.site/PIPEX-UNIX-mechanism-in-detail-bdf7dd955b6a4bcd99852156ca50186c?pvs=4',
     },
 );
