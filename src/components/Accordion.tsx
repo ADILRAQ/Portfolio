@@ -47,11 +47,13 @@ const Accordion: React.FC<AccordionProp> = ({id, data, openedId, isOpen}) => {
         >
           <div className="font-light p-4 text-[#51595F]">
             {data.description}
-            <div className='flex mt-4'>
-              <div className='flex-1'>
+            <div className='flex gap-2 mt-4'>
+              <div className='w-[90%]'>
                 <Techs items={data.techs || []} type={{variant: 'bordered', sz: 'sm'}}/>
               </div>
-              <Link link={data.link} />
+              <div className='align-start justify-start h-[20px]'>
+                <Link link={data.link} />
+              </div>
             </div>
           </div>
         </div>
